@@ -281,18 +281,18 @@ body {
 }
 
 .button {
-  width: 40px; /* Increase the width */
-  height: 40px; /* Increase the height */
-  padding: 30px; /* Increase the padding */
-  background-color: #9A6DD7;
+  width: 26px;
+  height: 26px;
+  padding: 25px;
+  background-color: #fff;
   border-radius: 6px;
   cursor: pointer;
 }
 
 .button i {
   display: block;
-  color: #333; /* Change the icon color */
-  font-size: 30px; /* Increase the font size */
+  color: #d6dee7;
+  font-size: 26px;
   text-align: center;
   line-height: 1;
 }
