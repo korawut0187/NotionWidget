@@ -30,30 +30,32 @@ $(function () {
     buffInterval = null,
     tFlag = false,
     albums = [
-      "Dawn",
-      "Me & You",
-      "Electro Boy",
-      "Home",
-      "Proxy (Original Mix)"
+      "Mildty",
+      "Mildty",
+      "Mildty",
+      "Mildty",
+      "Mildty",
     ],
     trackNames = [
-      "Skylike - Dawn",
-      "Alex Skrindo - Me & You",
-      "Kaaze - Electro Boy",
-      "Jordan Schor - Home",
-      "Martin Garrix - Proxy"
+      "1000PRUENI - Pai mae",
+      "1000PRUENI - Sutaato",
+      "1000PRUENI - Secret",
+      "1000PRUENI - Yummy",
+      "1000PRUENI - 7Bridge"
     ],
     albumArtworks = ["_1", "_2", "_3", "_4", "_5"],
     trackUrl = [
-      "https://www.youtube.com/watch?v=qGh94oGQziw&list=RDGMEMCMFH2exzjBeE_zAHHJOdxgVMqGh94oGQziw&index=1&pp=8AUB",
-      "https://www.youtube.com/watch?v=qGh94oGQziw&list=RDGMEMCMFH2exzjBeE_zAHHJOdxgVMqGh94oGQziw&index=1&pp=8AUB",
-      "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/3.mp3",
-      "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/4.mp3",
-      "https://www.youtube.com/watch?v=qGh94oGQziw&list=RDGMEMCMFH2exzjBeE_zAHHJOdxgVMqGh94oGQziw&index=1&pp=8AUB"
+      "1.mp3",
+      "2.mp3",
+      "3.mp3",
+      "4.mp3",
+      "5.mp3",
     ],
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next"),
     currIndex = -1;
+
+  var audio = new Audio();
 
   function playPause() {
     setTimeout(function () {
@@ -156,6 +158,9 @@ $(function () {
       tProgress.text("00:00");
       albumArt.removeClass("buffering").removeClass("active");
       clearInterval(buffInterval);
+
+      // Auto play next track
+      selectTrack(1);
     }
   }
 
@@ -171,8 +176,21 @@ $(function () {
   }
 
   function selectTrack(flag) {
-    if (flag == 0 || flag == 1) ++currIndex;
-    else --currIndex;
+    if (flag == 0 || flag == 1) {
+      if (currIndex === albums.length - 1) {
+        // If it's the last track, loop back to the first track
+        currIndex = 0;
+      } else {
+        ++currIndex;
+      }
+    } else {
+      if (currIndex === 0) {
+        // If it's the first track, loop to the last track
+        currIndex = albums.length - 1;
+      } else {
+        --currIndex;
+      }
+    }
 
     if (currIndex > -1 && currIndex < albumArtworks.length) {
       if (flag == 0) i.attr("class", "fa fa-play");
@@ -220,9 +238,8 @@ $(function () {
   }
 
   function initPlayer() {
-    audio = new Audio();
-
     selectTrack(0);
+    audio.play();
 
     audio.loop = false;
 
