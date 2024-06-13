@@ -45,11 +45,11 @@ $(function () {
     ],
     albumArtworks = ["_1", "_2", "_3", "_4", "_5"],
     trackUrl = [
-      "https://www.youtube.com/watch?v=xoWxv2yZXLQ&list=PLWL923jZIGrtOTDYPnk7wYo931GIS2-CD",
-      "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/1.mp3",
+      "https://www.youtube.com/watch?v=qGh94oGQziw&list=RDGMEMCMFH2exzjBeE_zAHHJOdxgVMqGh94oGQziw&index=1&pp=8AUB",
+      "https://www.youtube.com/watch?v=qGh94oGQziw&list=RDGMEMCMFH2exzjBeE_zAHHJOdxgVMqGh94oGQziw&index=1&pp=8AUB",
       "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/3.mp3",
       "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/4.mp3",
-      "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/5.mp3"
+      "https://www.youtube.com/watch?v=qGh94oGQziw&list=RDGMEMCMFH2exzjBeE_zAHHJOdxgVMqGh94oGQziw&index=1&pp=8AUB"
     ],
     playPreviousTrackButton = $("#play-previous"),
     playNextTrackButton = $("#play-next"),
