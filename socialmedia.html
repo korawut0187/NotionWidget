@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<!-- Auther: Shorouk Abdelaziz  https://shorouk.dev -->
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Socials</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+    }
+
+    .wrapper {
+      padding-top: 10px;
+      display: inline-flex;
+
+    }
+
+    .social {
+      background-color: #F6F3F9;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+    }
+
+    .icon {
+      font-size: 0.8em;
+    }
+
+    .email:hover {
+      background-color: #23c8c8;
+    }
+
+    .email:hover {
+      background-color: #23c8c8;
+    }
+
+    .facebook:hover {
+      background-color: #4267B2;
+    }
+
+    .instagram:hover {
+      background: rgb(241, 102, 217);
+      background: radial-gradient(circle, rgba(241, 102, 217, 1) 10%, rgba(252, 176, 69, 1) 76%, rgba(253, 29, 29, 1) 100%);
+    }
+
+    .twitter:hover {
+      background-color: #26a7de;
+    }
+
+    .social {
+      position: relative;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .social:hover {
+      color: #fff;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <body>
+
+    <div class="wrapper">
+
+      
+
+      <!-- Start email Icon -->
+      <div id="email" onclick="navigate(this.id)" class="social email">
+        <span class="icon email"><i class="fa-solid fa-envelope"></i></span>
+      </div>
+      <!-- End email Icon -->
+
+      <!-- Start email Icon -->
+      <div id="email" onclick="navigate(this.id)" class="social email">
+        <span class="icon email"><i class="fa-solid fa-envelope"></i></span>
+      </div>
+      <!-- End email Icon -->
+
+      <!-- Start facebook Icon -->
+      <div id="facebook" onclick="navigate(this.id)" class="social facebook">
+        <span class="icon"><i class="fab fa-facebook"></i></span>
+      </div>
+      <!-- End facebook Icon -->
+
+
+      <!-- Start instagram Icon -->
+      <div id="instagram" onclick="navigate(this.id)" class="social instagram">
+        <span class="icon"><i class="fab fa-instagram"></i></span>
+      </div>
+      <!-- End instagram Icon -->
+
+      <!-- Start twitter Icon -->
+      <div id="twitter" onclick="navigate(this.id)" class="social twitter">
+        <span class="icon"><i class="fab fa-twitter"></i></span>
+      </div>
+      <!-- End twitter Icon -->
+
+    </div>
+
+
+
+
+    <script>
+      function navigate(id) {
+
+        //if you want the URL to open in the same window use '_parent'  instead of '_blank'
+
+        if (id === "email") {
+          window.open("mailto:korawut49@gmail.com", '_blank').focus(); //Add your email after "mailto:""
+        }
+        else if (id === "email") {
+          window.open("mailto:korawut4work@gmail.com", '_blank').focus(); //Add your email after "mailto:""
+        }
+        else if (id === "facebook") {
+          window.open("https://www.facebook.com/korawut.pukingngoen", '_blank').focus(); //Add the url to your facebook page or account
+        }
+        else if (id === "instagram") {
+          window.open("https://www.instagram.com/aw1108_?igsh=MW1vN2VnOGJ3Z25rdw==", '_blank').focus(); //Add the url to your instagram account
+        }
+        else if (id === "twitter") {
+          window.open("https://x.com/Lorzee_ee?t=2r48yfk67u1-G8PzTkivvA&s=09", '_blank').focus(); //Add the url to your pinterest account
+        }
+        
+      }
+
+    </script>
+
+
+
+  </body>
+
+</html>
