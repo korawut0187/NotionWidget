@@ -239,7 +239,7 @@ $(function () {
   
     function initPlayer() {
       selectTrack(0);
-      audio.play();
+     
   
       audio.loop = false;
   
